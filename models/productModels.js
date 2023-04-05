@@ -28,3 +28,6 @@ module.exports = mongoose.model("Product", productModel);
 //and at the code we are exporting it in a way it can be used in the application
 
 //this way, we did our "model" using Mongoose and made a connection with our remote database "restAPI" on MONGODB
+
+
+//Source: https://macoratti.net/17/04/node_restmgdb3.htm
