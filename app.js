@@ -1,7 +1,7 @@
 var express = require("express");
 var mongoose = require("mongoose");
 
-var productsRouter = require('./routes/productsRoute');
+var productsRouter = require("./routes/productsRouter");
 
 var app = express();
 var router = express.Router();
@@ -23,26 +23,25 @@ app.listen(5000, function () {
   console.log("Server listening on port 5000");
 });
 
-app.use('/products', productsRouter);
+app.use("/products", productsRouter);
 
-router.get('/', function(req,res) {
-  res.send('This is the home page!');
+router.get("/", function (req, res) {
+  res.send("This is the home page!");
 });
 
-router.get('/teste', function(res,res) {
-  res.send('This is the /test page!')
+router.get("/teste", function (res, res) {
+  res.send("This is the /test page!");
 });
 
-app.use('/', router);
+app.use("/", router);
 
-app.get('/', function (req,res) {
-  res.send('Welcome to Express!');
+app.get("/", function (req, res) {
+  res.send("Welcome to Express!");
 });
 
-app.get('/teste', function (req, res) {
-  res.send('Replying /test solicitation');
+app.get("/teste", function (req, res) {
+  res.send("Replying /test solicitation");
 });
-
 
 // the var express requires (calls) the express framework to the actual document and the "express" var
 
